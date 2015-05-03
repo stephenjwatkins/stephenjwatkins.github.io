@@ -1,0 +1,87 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 100%;
+  line-height: 1.4;
+}
+
+html {
+  background-color: white;
+  color: #999;
+}
+
+a {
+  color: rgba(180, 50, 50, 1);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(180, 50, 50, .2);
+  transition: color .15s ease-in-out;
+}
+a:hover {
+  color: rgba(255, 50, 50, 1);
+}
+
+.wrapper {
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.me {
+  display: inline-block;
+  font-size: 0;
+}
+
+.avatar {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 24px;
+
+  border-radius: 100%;
+  border: 0px solid #999;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+.avatar img {
+  display: block;
+  width: 168px;
+  height: auto;
+}
+
+.copy {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0;
+  font-size: 18px;
+  text-align: left;
+  text-rendering: optimizeLegibility;
+}
+
+.resume-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.resume-item {
+  margin-bottom: 12px;
+}
+.resume-item:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width : 715px) {
+  .wrapper {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .avatar {
+    margin-bottom: 0;
+  }
+  .copy {
+    font-size: 22px;
+    margin-left: 36px;
+  }
+}
