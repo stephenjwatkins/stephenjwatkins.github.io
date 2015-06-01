@@ -41,8 +41,7 @@ a:hover {
   margin-bottom: 24px;
 
   border-radius: 100%;
-  border: 0px solid #999;
-  background-color: #eee;
+  background-color: rgba(0, 0, 0, .05);
   overflow: hidden;
 }
 
