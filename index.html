@@ -56,7 +56,7 @@
         var tick = 0;
         setInterval(function() {
           tick++;
-          (tick % 2 == 1) ? createFavicon() : removeFavicon();
+          (tick % 2 == 1) ? createFavicon('favicon.png') : createFavicon('does-not-exist.png');
         }, 2000);
       }());
     </script>
