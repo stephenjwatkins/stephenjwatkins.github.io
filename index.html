@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="/assets/styles/css/normalize.css">
     <link rel="stylesheet" href="/assets/styles/css/main.css">
   </head>
@@ -38,6 +38,27 @@
       </div>
 
     </main>
+    
+    <script>
+      (function() {
+        var removeFavicon = function() {
+          var el = document.querySelector('link[rel="shortcut icon"]');
+          el.parentNode.removeChild(el);
+        };
+        var createFavicon = function(path) {
+          var link = document.createElement('link');
+          link.type = 'image/x-icon';
+          link.rel = 'shortcut icon';
+          link.href = path;
+          document.getElementsByTagName('head')[0].appendChild(link);
+        };
+        var tick = 0;
+        setInterval(function() {
+          tick++;
+          (tick % 2 == 1) ? createFavicon('favicon.png') : removeFavicon();
+        }, 2000);
+      }());
+    </script>
 
   </body>
 </html>
