@@ -49,13 +49,15 @@
           var link = document.createElement('link');
           link.type = 'image/x-icon';
           link.rel = 'shortcut icon';
-          link.href = path;
+          link.href = path || 'favicon.png';
           document.getElementsByTagName('head')[0].appendChild(link);
         };
+        removeFavicon();
+        createFavicon();
         var tick = 0;
         setInterval(function() {
           tick++;
-          (tick % 2 == 1) ? createFavicon('favicon.png') : removeFavicon();
+          (tick % 2 == 1) ? createFavicon() : removeFavicon();
         }, 2000);
       }());
     </script>
