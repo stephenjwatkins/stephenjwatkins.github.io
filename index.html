@@ -41,22 +41,14 @@
     
     <script>
       (function() {
-        var removeFavicon = function() {
+        var changeFavicon = function(path) {
           var el = document.querySelector('link[rel="shortcut icon"]');
-          el.parentNode.removeChild(el);
+          el.href = path || 'favicon.png';
         };
-        var createFavicon = function(path) {
-          var link = document.createElement('link');
-          link.type = 'image/x-icon';
-          link.rel = 'shortcut icon';
-          link.href = path || 'favicon.png';
-          document.getElementsByTagName('head')[0].appendChild(link);
-        };
-        removeFavicon();
         var tick = 0;
         setInterval(function() {
           tick++;
-          (tick % 2 == 1) ? createFavicon('favicon.png') : createFavicon('does-not-exist.png');
+          changeFavicon((tick % 2) == 1 ? 'favicon.png' : 'does-not-exist.png');
         }, 2000);
       }());
     </script>
