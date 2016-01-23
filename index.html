@@ -38,20 +38,6 @@
       </div>
 
     </main>
-    
-    <script>
-      (function() {
-        var changeFavicon = function(path) {
-          var el = document.querySelector('link[rel="shortcut icon"]');
-          el.href = path || 'favicon.png';
-        };
-        var tick = 0;
-        setInterval(function() {
-          tick++;
-          changeFavicon((tick % 2) == 1 ? 'favicon.png' : 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
-        }, 1000);
-      }());
-    </script>
 
   </body>
 </html>
