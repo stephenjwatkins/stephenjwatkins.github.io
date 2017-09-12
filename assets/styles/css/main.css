@@ -50,7 +50,7 @@ a:hover {
 
 .avatar img {
   display: block;
-  width: 168px;
+  width: 192px;
   height: auto;
 }
 
@@ -74,6 +74,12 @@ a:hover {
 }
 .resume-item:last-child {
   margin-bottom: 0;
+}
+
+.living-in {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #959595;
 }
 
 @media only screen and (min-width : 715px) {
