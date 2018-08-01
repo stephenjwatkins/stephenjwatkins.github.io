@@ -61,6 +61,7 @@ a:hover {
   font-size: 18px;
   text-align: left;
   text-rendering: optimizeLegibility;
+  white-space: normal;
 }
 
 .resume-list {
