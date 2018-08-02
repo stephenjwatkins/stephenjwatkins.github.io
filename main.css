@@ -12,45 +12,48 @@ body {
 
 body {
   display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f0f0f0;
   color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   color: rgba(180, 50, 50, 1);
   text-decoration: none;
-  border-bottom: 1px solid rgba(180, 50, 50, .2);
-  transition: color .15s ease-in-out;
+  border-bottom: 1px solid rgba(180, 50, 50, 0.2);
+  transition: color 0.15s ease-in-out;
 }
 a:hover {
   color: rgba(255, 50, 50, 1);
 }
 
-.wrapper {
-  display: flex;
-  margin: auto;
-  padding: 48px 24px;
-  text-align: center;
-}
-
 .me {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 48px 24px;
   font-size: 0;
 }
 
 .avatar {
+  flex: 0 0 auto;
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 24px;
 
   border-radius: 100%;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: hsla(360, 10%, 80%, 1);
+
   overflow: hidden;
 }
 
 .avatar img {
   display: block;
-  width: 192px;
+  width: 160px;
   height: auto;
 }
 
@@ -61,7 +64,6 @@ a:hover {
   font-size: 18px;
   text-align: left;
   text-rendering: optimizeLegibility;
-  white-space: normal;
 }
 
 .resume-list {
@@ -78,25 +80,24 @@ a:hover {
 }
 
 .living-in {
-  margin-top: 30px;
+  margin-top: 28px;
   font-size: 14px;
-  color: #959595;
+  color: #888;
 }
 
-@media only screen and (min-width : 715px) {
-  .wrapper {
-    padding-top: 96px;
-    padding-bottom: 96px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+@media only screen and (min-width: 715px) {
   .me {
-    white-space: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 24px;
+    font-size: 0;
   }
   .avatar {
     margin-bottom: 0;
+  }
+  .avatar img {
+    width: 192px;
   }
   .copy {
     font-size: 18px;
