@@ -30,13 +30,20 @@ body {
 a {
   color: hsl(220, 65%, 45%);
   text-decoration: none;
-  border-bottom: 1px solid hsla(220, 65%, 45%, 0.2);
   border-radius: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-left: -2px;
+  margin-right: -2px;
   outline: none;
   transition: all 0.15s ease-in-out;
 }
-a:hover,
-a:focus {
+a span {
+  border-bottom: 1px solid hsla(220, 65%, 45%, 0.2);
+  transition: all 0.15s ease-in-out;
+}
+a:hover span,
+a:focus span {
   border-bottom-color: hsla(220, 65%, 45%, 1);
 }
 a:focus {
@@ -45,10 +52,12 @@ a:focus {
 @media (prefers-color-scheme: dark) {
   a {
     color: hsl(220, 75%, 75%);
+  }
+  a span {
     border-bottom-color: hsla(220, 75%, 75%, 0.4);
   }
-  a:hover,
-  a:focus {
+  a:hover span,
+  a:focus span {
     border-bottom-color: hsla(220, 75%, 75%, 1);
   }
   a:focus {
