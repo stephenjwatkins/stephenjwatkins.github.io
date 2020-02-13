@@ -10,6 +10,13 @@ html {
   color: hsl(220, 10%, 10%);
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: hsl(220, 10%, 15%);
+    color: hsl(220, 10%, 90%);
+  }
+}
+
 body {
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -34,6 +41,19 @@ a:focus {
 }
 a:focus {
   background-color: hsla(220, 65%, 45%, 0.1);
+}
+@media (prefers-color-scheme: dark) {
+  a {
+    color: hsl(220, 75%, 75%);
+    border-bottom-color: hsla(220, 75%, 75%, 0.4);
+  }
+  a:hover,
+  a:focus {
+    border-bottom-color: hsla(220, 75%, 75%, 1);
+  }
+  a:focus {
+    background-color: hsla(220, 75%, 75%, 0.2);
+  }
 }
 
 .me {
@@ -84,6 +104,11 @@ a:focus {
   margin-top: 24px;
   font-size: 0.875rem;
   color: hsl(220, 5%, 60%);
+}
+@media (prefers-color-scheme: dark) {
+  .living-in {
+    color: hsl(220, 5%, 65%);
+  }
 }
 
 @media only screen and (min-width: 769px) {
