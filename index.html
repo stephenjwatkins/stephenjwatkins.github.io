@@ -47,9 +47,17 @@
           </li>
         </ul>
         <div class="living-in">
-          Living in Greenville, SC.
+          <a id="drinking-coffee" href="https://yeahthatgreenville.coffee" target="_blank">Drinking coffee</a> in Greenville, SC.
         </div>
       </div>
     </div>
+    <script>
+      var url = 'https://yeahthatgreenville.coffee/api/check-in?key=MTA5MDUwMjAwNTE0MzQ3MzQ3MDc0';
+      window.fetch(url)
+        .then((response) => response.json())
+        .then((result) => {
+          document.getElementById("drinking-coffee").textContent = "Drinking coffee at " + result.shopName;
+        });
+    </script>
   </body>
 </html>
