@@ -85,6 +85,7 @@ a:focus {
   display: block;
   width: 180px;
   height: auto;
+  border-radius: 999px;
 }
 
 .copy {
