@@ -85,6 +85,7 @@ a:focus {
   display: block;
   width: 180px;
   height: auto;
+  border-radius: 6px;
 }
 
 .copy {
@@ -141,7 +142,7 @@ a:focus {
   }
   .copy {
     margin-top: 0;
-    margin-left: 48px;
+    margin-left: 36px;
   }
   .living-in {
     margin-top: 48px;
