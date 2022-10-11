@@ -48,21 +48,13 @@
         </ul>
         <div class="living-in">
           <div>
-            <a id="drinking-coffee" href="https://yeahthatgreenville.coffee" target="_blank">Drinking coffee</a> in Greenville, SC.
+            Living in Greenville, SC.
           </div>
           <div>
-            Building <a href="https://yeahthatgreenville.coffee" target="_blank">YeahThatGreenville.Coffee</a> and <a href="https://solareclipse.app" target="_blank">SolarEclipse.app</a>.
+            Building <a href="https://turboremote.org" target="_blank">TurboRemote.org</a>, <a href="https://solareclipse.app" target="_blank">SolarEclipse.app</a>, and <a href="https://yeahthatgreenville.coffee" target="_blank">YeahThatGreenville.coffee</a>.
           </div>
         </div>
       </div>
     </div>
-    <script>
-      var url = 'https://yeahthatgreenville.coffee/api/check-in?key=MTA5MDUwMjAwNTE0MzQ3MzQ3MDc0';
-      window.fetch(url)
-        .then((response) => response.json())
-        .then((result) => {
-          document.getElementById("drinking-coffee").textContent = "Drinking coffee at " + result.shopName;
-        });
-    </script>
   </body>
 </html>
